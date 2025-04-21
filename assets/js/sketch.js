@@ -14,7 +14,7 @@ function setup() {
 
 function draw() {
   clear(); // transparent background
-  fill(255, 100, 100);
+  fill(255);
   ellipse(ballX, ballY, ballRadius * 2);
 
   ballX += ballSpeedX;
