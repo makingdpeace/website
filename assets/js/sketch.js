@@ -2,8 +2,8 @@ let canvas;
 let peaceImage;
 let peaceX = 100;
 let peaceY = 100;
-let peaceSpeedX = 1.5;
-let peaceSpeedY = 1.5;
+//let peaceSpeedX = 1.5;
+//let peaceSpeedY = 1.5;
 let peaceRadius = 25; // Optional: Keep for collision detection
 
 function preload() {
@@ -22,21 +22,21 @@ function draw() {
   clear(); // transparent background
   
   // Draw the image at the ball's position
-  //image(peaceImage, peaceX - peaceRadius, peaceY - peaceRadius, peaceRadius * 2, peaceRadius * 2);
-  image(peaceImage, peaceX - peaceRadius, peaceY - peaceRadius, peaceRadius, peaceRadius);
+  image(peaceImage, peaceX - peaceRadius, peaceY - peaceRadius, peaceRadius * 2, peaceRadius * 2);
+  //image(peaceImage, peaceX - peaceRadius, peaceY - peaceRadius, peaceRadius, peaceRadius);
 
-  peaceX +=  peaceSpeedX;
-  peaceY +=  peaceSpeedY;
+  //peaceX +=  peaceSpeedX;
+  //peaceY +=  peaceSpeedY;
 
   // Bounce off left and right edges
-  if (peaceX - peaceRadius < 0 || peaceX + peaceRadius > width) {
-    peaceSpeedX *= -1;
-  }
+  //if (peaceX - peaceRadius < 0 || peaceX + peaceRadius > width) {
+  //  peaceSpeedX *= -1;
+  //}
 
   // Bounce off top and bottom edges
-  if (peaceY - peaceRadius < 0 || peaceY + peaceRadius > height) {
-    peaceSpeedY *= -1;
-  }
+  //if (peaceY - peaceRadius < 0 || peaceY + peaceRadius > height) {
+  //  peaceSpeedY *= -1;
+  //}
 }
 
 function windowResized() {
