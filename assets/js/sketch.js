@@ -8,7 +8,7 @@ let peaceRadius = 25; // Optional: Keep for collision detection
 
 function preload() {
   // Load the image in preload() to ensure it's ready before setup
-  peaceImage = loadImage('seed-of-life.png');
+  peaceImage = loadImage('assets/js/seed-of-life.png');
 }
 
 function setup() {
