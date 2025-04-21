@@ -2,8 +2,8 @@ let canvas;
 let peaceImage;
 let peaceX = 100;
 let peaceY = 100;
-let peaceSpeedX = 3;
-let peaceSpeedY = 2;
+let peaceSpeedX = 1.5;
+let peaceSpeedY = 1.5;
 let peaceRadius = 25; // Optional: Keep for collision detection
 
 function preload() {
