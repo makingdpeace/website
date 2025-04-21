@@ -4,6 +4,8 @@ let speedX = 2;
 let speedY = 3;
 let ballRadius = 25; // Radius of the ball for collision detection
 let canvas;
+let containerWidth = container.offsetWidth;
+let containerHeight = container.offsetHeight;
 
 function setup() {
   let container = document.getElementById('p5-sketch-container');
@@ -23,12 +25,12 @@ function draw() {
   y += speedY;
 
   // Check if the ball hits the left or right edge
-  if (x - ballRadius < 0 || x + ballRadius > container.offsetWidth) {
+  if (x - ballRadius < 0 || x + ballRadius > containerWidth) {
     speedX *= -1; // Reverse horizontal direction if hitting left or right
   }
 
   // Check if the ball hits the top or bottom edge
-  if (y - ballRadius < 0 || y + ballRadius > container.offsetHeight) {
+  if (y - ballRadius < 0 || y + ballRadius > containerHeight) {
     speedY *= -1; // Reverse vertical direction if hitting top or bottom
   }
 
