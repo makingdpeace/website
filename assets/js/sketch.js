@@ -22,7 +22,8 @@ function draw() {
   clear(); // transparent background
   
   // Draw the image at the ball's position
-  image(peaceImage, peaceX - peaceRadius, peaceY - peaceRadius, peaceRadius * 2, peaceRadius * 2);
+  //image(peaceImage, peaceX - peaceRadius, peaceY - peaceRadius, peaceRadius * 2, peaceRadius * 2);
+  image(peaceImage, peaceX - peaceRadius, peaceY - peaceRadius, 50, 50);
 
   peaceX +=  peaceSpeedX;
   peaceY +=  peaceSpeedY;
