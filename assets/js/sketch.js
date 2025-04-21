@@ -4,7 +4,9 @@ let peaceX = 100;
 let peaceY = 100;
 //let peaceSpeedX = 1.5;
 //let peaceSpeedY = 1.5;
-let peaceRadius = 25; // Optional: Keep for collision detection
+//let peaceRadius = 25; // Optional: Keep for collision detection
+let width = container.offsetWidth;
+let height = container.offsetHeight;
 
 function preload() {
   // Load the image in preload() to ensure it's ready before setup
@@ -24,7 +26,7 @@ function draw() {
   // Draw the image at the ball's position
   //image(peaceImage, peaceX - peaceRadius, peaceY - peaceRadius, peaceRadius * 2, peaceRadius * 2);
   //image(peaceImage, peaceX - peaceRadius, peaceY - peaceRadius, peaceRadius, peaceRadius);
-  image(peaceImage, container.offsetWidth, container.offsetWidth);
+  image(peaceImage, width/2, height/2);
 
   //peaceX +=  peaceSpeedX;
   //peaceY +=  peaceSpeedY;
