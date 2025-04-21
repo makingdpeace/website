@@ -23,7 +23,7 @@ function draw() {
   
   // Draw the image at the ball's position
   //image(peaceImage, peaceX - peaceRadius, peaceY - peaceRadius, peaceRadius * 2, peaceRadius * 2);
-  image(peaceImage, peaceX - peaceRadius, peaceY - peaceRadius, 1000, 1000);
+  image(peaceImage, peaceX - peaceRadius, peaceY - peaceRadius, 10000, 10000);
 
   peaceX +=  peaceSpeedX;
   peaceY +=  peaceSpeedY;
