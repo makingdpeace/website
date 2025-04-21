@@ -2,25 +2,31 @@ let x = 100;
 let y = 100;
 let speedX = 2;
 let speedY = 3;
+let ballRadius = 25; // Radius of the ball for collision detection
 
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
-  canvas.parent('p5-sketch-container');
+  canvas.parent('p5-sketch-container'); // Optional: set canvas inside a specific container
   noStroke();
-  background(0, 0, 0, 0); // Transparent background at setup
 }
 
 function draw() {
-  background(0);
-  fill(255, 0, 0);
-  ellipse(x, y, 50, 50);
+  clear(); // Keep the background transparent
+
+  fill(255, 0, 0); // Ball color (red)
+  ellipse(x, y, ballRadius * 2, ballRadius * 2); // Draw the ball
+
+  // Update ball position
   x += speedX;
   y += speedY;
 
-  if (x > width || x < 0) {
-    speedX *= -1;
+  // Check if the ball hits the left or right edge
+  if (x - ballRadius < 0 || x + ballRadius > width) {
+    speedX *= -1; // Reverse horizontal direction if hitting left or right
   }
-  if (y > height || y < 0) {
-    speedY *= -1;
+
+  // Check if the ball hits the top or bottom edge
+  if (y - ballRadius < 0 || y + ballRadius > height) {
+    speedY *= -1; // Reverse vertical direction if hitting top or bottom
   }
 }
