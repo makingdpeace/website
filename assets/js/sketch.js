@@ -3,12 +3,14 @@ let y = 100;
 let speedX = 2;
 let speedY = 3;
 let ballRadius = 25; // Radius of the ball for collision detection
+let canvas;
 
 function setup() {
-  let canvas = createCanvas(windowWidth, windowHeight);
-  canvas.parent('p5-sketch-container'); // Optional: set canvas inside a specific container
+  let container = document.getElementById('p5-sketch-container');
+  canvas = createCanvas(container.offsetWidth, container.offsetHeight);
+  canvas.parent('p5-sketch-container');
   noStroke();
-}
+  }
 
 function draw() {
   clear(); // Keep the background transparent
@@ -29,4 +31,8 @@ function draw() {
   if (y - ballRadius < 0 || y + ballRadius > height) {
     speedY *= -1; // Reverse vertical direction if hitting top or bottom
   }
+
+function windowResized() {
+  let container = document.getElementById('p5-sketch-container');
+  resizeCanvas(container.offsetWidth, container.offsetHeight);
 }
