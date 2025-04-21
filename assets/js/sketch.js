@@ -18,7 +18,7 @@ function windowResized() {
 function draw() {
   clear(); // Keep the background transparent
 
-  fill(255, 255, 255); // Ball color (white)
+  fill(255, 0, 0); // Ball color (white)
   ellipse(x, y, ballRadius * 2, ballRadius * 2); // Draw the ball
 
   // Update ball position
