@@ -7,6 +7,7 @@ function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('p5-sketch-container');
   noStroke();
+  background(0, 0, 0, 0); // Transparent background at setup
 }
 
 function draw() {
