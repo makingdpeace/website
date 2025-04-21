@@ -4,7 +4,7 @@ let peaceX = 100;
 let peaceY = 100;
 let peaceSpeedX = 1.5;
 let peaceSpeedY = 1.5;
-let peaceRadius = 250; // Optional: Keep for collision detection
+let peaceRadius = 25; // Optional: Keep for collision detection
 
 function preload() {
   // Load the image in preload() to ensure it's ready before setup
