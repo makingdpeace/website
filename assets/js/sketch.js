@@ -23,12 +23,12 @@ function draw() {
   y += speedY;
 
   // Check if the ball hits the left or right edge
-  if (x - ballRadius < 0 || x + ballRadius > width) {
+  if (x - ballRadius < 0 || x + ballRadius > container.offsetWidth) {
     speedX *= -1; // Reverse horizontal direction if hitting left or right
   }
 
   // Check if the ball hits the top or bottom edge
-  if (y - ballRadius < 0 || y + ballRadius > height) {
+  if (y - ballRadius < 0 || y + ballRadius > container.offsetHeight) {
     speedY *= -1; // Reverse vertical direction if hitting top or bottom
   }
 
