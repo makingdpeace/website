@@ -1,36 +1,41 @@
-let x = 100;
-let y = 100;
-let speedX = 2;
-let speedY = 3;
-let ballRadius = 25; // Radius of the ball for collision detection
-let container = document.getElementById('p5-sketch-container');
+let canvas;
+let ballX = 100;
+let ballY = 100;
+let ballSpeedX = 3;
+let ballSpeedY = 2;
+let ballRadius = 25;
 
 function setup() {
+  const container = document.getElementById('p5-sketch-container');
   canvas = createCanvas(container.offsetWidth, container.offsetHeight);
   canvas.parent('p5-sketch-container');
   noStroke();
-  }
-
-function windowResized() {
-  resizeCanvas(container.offsetWidth, container.offsetHeight);
 }
 
 function draw() {
-  clear(); // Keep the background transparent
+  clear(); // transparent background
+  fill(255, 100, 100);
+  ellipse(ballX, ballY, ballRadius * 2);
 
-  fill(255, 0, 0); // Ball color (white)
-  ellipse(x, y, ballRadius * 2, ballRadius * 2); // Draw the ball
+  ballX += ballSpeedX;
+  ballY += ballSpeedY;
 
-  // Update ball position
-  x += speedX;
-  y += speedY;
-
-  // Check if the ball hits the left or right edge
-  if (x - ballRadius < 0 || x + ballRadius > container.offsetWidth) {
-    speedX *= -1; // Reverse horizontal direction if hitting left or right
+  // Bounce off left and right edges
+  if (ballX - ballRadius < 0 || ballX + ballRadius > width) {
+    ballSpeedX *= -1;
   }
 
-  // Check if the ball hits the top or bottom edge
-  if (y - ballRadius < 0 || y + ballRadius > container.offsetHeight) {
-    speedY *= -1; // Reverse vertical direction if hitting top or bottom
+  // Bounce off top and bottom edges
+  if (ballY - ballRadius < 0 || ballY + ballRadius > height) {
+    ballSpeedY *= -1;
   }
+}
+
+function windowResized() {
+  const container = document.getElementById('p5-sketch-container');
+  resizeCanvas(container.offsetWidth, container.offsetHeight);
+
+  // Optional: reposition ball if it goes out of bounds
+  ballX = constrain(ballX, ballRadius, width - ballRadius);
+  ballY = constrain(ballY, ballRadius, height - ballRadius);
+}
