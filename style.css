@@ -16,11 +16,14 @@ header, footer {
 
 main {
   padding: 2em;
-}
 
-#p5-sketch-container {
+  #p5-sketch-container {
   width: 100%;
   height: 50%;  /* Set a fixed height or use a percentage */
   margin: 20 auto;
   background-color: #f4f4f4; /* Optional background color */
+  }
+
 }
+
+
