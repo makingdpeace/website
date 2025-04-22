@@ -1,17 +1,88 @@
+/* Basic responsive text handling for all content */
 body {
-  background-color: black;
-  color: white;
-  font-family: Arial, sans-serif;
-  margin: 0 auto;
-  padding: 1rem;
+  /* Ensures the body never exceeds the viewport width */
+  max-width: 100%;
+  /* Adds some breathing room on the sides */
+  padding: 0 15px;
+  /* Prevents horizontal scrolling */
+  overflow-x: hidden;
+  /* Improves text readability */
+  line-height: 1.5;
+  /* Allows long words to break */
+  word-wrap: break-word;
 }
 
-a {
-  color: white;
-  margin: 0 auto;
+/* Header specific rules */
+header, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  max-width: 100%;
+  /* Ensures headers have proper spacing */
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+/* Responsive image handling */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive table handling */
+table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Preserve your original link styling */
+a, a:link, a:visited {
+  /* Add your original styles here */
+  color: #0066cc;  /* Example - replace with your colors */
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  /* Add your original hover styles here */
+  color: #004080;  /* Example - replace with your colors */
   text-decoration: underline;
 }
 
-header {
-  margin-bottom: 40px;
+/* Tablet-sized screens */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  
+  header, h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  h3, h4, h5, h6 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile phone screens */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+    padding: 0 8px;
+  }
+  
+  header, h1 {
+    font-size: 1.3rem;
+  }
+  
+  h2 {
+    font-size: 1.1rem;
+  }
+  
+  h3, h4, h5, h6 {
+    font-size: 0.8rem;
+  }
 }
