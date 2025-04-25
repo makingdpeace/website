@@ -41,7 +41,7 @@ table {
 /* Preserve your original link styling */
 a {
   /* Add your original styles here */
-  color: #0066cc;  /* Example - replace with your colors */
+  color: #8d8d8d;  /* Example - replace with your colors */
   text-decoration: underline;
    /* This ensures links don't overflow their containers */
   display: inline-block;
@@ -54,11 +54,11 @@ a {
     font-size: 14px;
   }
   
-  header, h1 {
+  header, h1, a {
     font-size: 1.8rem;
   }
   
-  h2, a {
+  h2 {
     font-size: 1.4rem;
   }
   
@@ -74,11 +74,11 @@ a {
     padding: 0 8px;
   }
   
-  header, h1 {
+  header, h1, a {
     font-size: 1.3rem;
   }
   
-  h2, a {
+  h2 {
     font-size: 1.1rem;
   }
   
