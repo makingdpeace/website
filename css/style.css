@@ -51,6 +51,28 @@ body.page-artists {
   position: relative; /* For positioning the overlay correctly */
 }
 
+body.page-covclub {
+  background-image: url('../../assets/Images/peace-covclub.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: keeps the background fixed during scroll */
+  margin: 0;
+  height: 100vh; /*Makes sure the body fills the viewport */
+  position: relative; /* For positioning the overlay correctly */
+}
+
+body.page-evie {
+  background-image: url('../../assets/Images/peace-evie.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: keeps the background fixed during scroll */
+  margin: 0;
+  height: 100vh; /*Makes sure the body fills the viewport */
+  position: relative; /* For positioning the overlay correctly */
+}
+
 /*body.page-contact {
   background-image: url('images/bg3.png');
   background-size: cover;
@@ -96,7 +118,7 @@ a {
 /* Tablet-sized screens */
 @media screen and (max-width: 768px) {
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
   
   header, h1{
@@ -115,7 +137,7 @@ a {
 /* Mobile phone screens */
 @media screen and (max-width: 480px) {
   body {
-    font-size: 12px;
+    font-size:16px;
     padding: 0 8px;
   }
   
