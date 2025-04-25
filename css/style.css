@@ -6,7 +6,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8); /* Black with 50% transparency */
+  background: rgba(0, 0, 0, 0.6); /* Black with 50% transparency */
   z-index: -1; /* Make sure it's on top of the background but below content */
 }
 
@@ -85,7 +85,7 @@ table {
 /* Preserve your original link styling */
 a {
   /* Add your original styles here */
-  color: #8d8d8d;  /* Example - replace with your colors */
+  color: #b5b5b5;  /* Example - replace with your colors */
   text-decoration: underline;
    /* This ensures links don't overflow their containers */
   display: inline-block;
