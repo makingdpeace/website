@@ -91,18 +91,28 @@ header, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
 }
 
-/* Responsive image handling
-img {
-  max-width: 100%;
-  height: auto;
-} */
+/* Record sleeves grid layout */
+.record-sleeves {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 15px; /* Space between images */
+  margin-top: 20px; /* Space above the grid */
+}
 
-/* Responsive table handling
-table {
-  width: 100%;
-  overflow-x: auto;
-  display: block;
-} */
+.record-sleeve {
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: transform 0.2s; /* Animation effect */
+}
+
+.record-sleeve img {
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+.record-sleeve:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
 
 /* Preserve your original link styling */
 a {

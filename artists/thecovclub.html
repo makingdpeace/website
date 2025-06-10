@@ -6,7 +6,7 @@
   <title>The Cov Club | PeaceMakingRecords</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body class="page-covclub">
+<body div class="page-covclub">
   <header>
     <h1>The Cov Club</h1>
     <nav>
@@ -25,5 +25,34 @@
     <p><a href="https://www.youtube.com/channel/UC_vsv0LNCVclNVEk4YH1ENg">YouTube</a></p>
     <p><a href="https://music.amazon.com/artists/B0BYZZVQ3H/the-cov-club?marketplaceId=A1F83G8C2ARO7P&musicTerritory=GB&ref=dm_sh_nbg3M7eqX0MAv0l8WyLhzTcCl">Amazon Music</a></p>
   </main>
+  <div class="record-sleeves">
+      <div class="record-sleeve" onclick="playTrack('../assets/audio/CCFC PUSB 49 to 99 MASTER.mp3')">
+        <img src="../assets/Images/CCFC PUSB 49 to 99.001.jpeg" alt="CCFC">
+      </div>
+      <div class="record-sleeve" onclick="playTrack('../assets/audio/Want To Know Even More The Cov Club MASTER.mp3')">
+        <img src="../assets/Images/WantToKnow The Cov Club.001.jpeg" alt="Want to Know">
+      </div>
+      <div class="record-sleeve" onclick="playTrack('../assets/audio/Your Game MASTER.mp3')">
+        <img src="../assets/Images/Your Game.001.jpeg" alt="Your Game">
+      </div>
+      <div class="record-sleeve" onclick="playTrack('../assets/audio/The Comeback Master.mp3')">
+        <img src="../assets/Images/The Comeback.001.jpeg" alt="The Comeback">
+      </div>
+      <div class="record-sleeve" onclick="playTrack('../assets/audio/Hopes of Sand MASTER.mp3')">
+        <img src="../assets/Images/Hopes of Sand.001.jpeg" alt="Hopes of Sand">
+      </div>
+
+      <!-- Add more record sleeves as needed -->
+    </div>
+    <!-- Audio Element (hidden) -->
+    <audio id="track"></audio>
+</div>
+<script>
+  function playTrack(track) {
+    var audio = document.getElementById('track');
+    audio.src = track; // Set the source to the selected track
+    audio.play();
+    }
+</script> 
 </body>
 </html>
