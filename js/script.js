@@ -1,15 +1,21 @@
-console.log("Hello from your script.js file!");
+// console.log("Hello from your script.js file!");
 
-document.addEventListener('DOMContentLoaded', function() {
-    const audioPlayer = document.getElementById('audio-player');
+let currentTrack = null; // Variable to keep track of the current track
 
-    document.querySelectorAll('.clickable-image').forEach(image => {
-        image.addEventListener('click', function() {
-            const audioSrc = this.getAttribute('data-audio');
-            audioPlayer.src = audioSrc;
-            audioPlayer.play().catch(error => {
-                console.error('Error playing audio:', error);
-            });
-        });
-    });
-});
+function toggleTrack(track) {
+    const audio = document.getElementById('track');
+
+    // If the clicked track is the same as the current track, toggle play/pause
+    if (currentTrack === track) {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    } else {
+        // If a different track is clicked, change the source and play it
+        audio.src = track;
+        audio.play();
+        currentTrack = track; // Update the current track
+    }
+}
