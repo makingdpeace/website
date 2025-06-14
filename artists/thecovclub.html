@@ -26,11 +26,11 @@
       <p><a href="https://music.apple.com/gb/artist/the-cov-club/1676591716">iTunes</a></p>
       <p><a href="https://www.youtube.com/channel/UC_vsv0LNCVclNVEk4YH1ENg">YouTube</a></p>
       <p><a href="https://music.amazon.com/artists/B0BYZZVQ3H/the-cov-club?marketplaceId=A1F83G8C2ARO7P&musicTerritory=GB&ref=dm_sh_nbg3M7eqX0MAv0l8WyLhzTcCl">Amazon Music</a></p>
-    </main>
-    <footer>
-      <p>(Cick Images to Play)</p>
-      <p>Latest Release - Golfing EP</p>
-    </footer>
+    <!-- </main> -->
+    <div>
+      <p>(Cick Images below to Play/Pause)</p>
+      <h2>Latest Release - The Golfer EP</h2>
+    </div>
     <div class="record-sleeves">
       <div class="record-sleeve" onclick="toggleTrack('../assets/audio/Golf with Ossama MASTER.mp3')">
         <img src="../assets/Images/Golf with.jpeg" alt="Golf With Ossama">
@@ -39,7 +39,10 @@
         <img src="../assets/Images/Drive Away.jpeg" alt="Drive Away">
       </div>
     </div>
-      <div class="record-sleeves">
+    <div>
+      <h2>Previous Releases</h2>
+    </div>
+    <div class="record-sleeves">
       <div class="record-sleeve" onclick="toggleTrack('../assets/audio/CCFC PUSB 49 to 99 MASTER.mp3')">
         <img src="../assets/Images/CCFC PUSB 49 to 99.001.jpeg" alt="CCFC">
       </div>
@@ -57,6 +60,7 @@
       </div>
       <!-- Add more record sleeves as needed -->
     </div>
+    </main>
     <!-- Audio Element (hidden) -->
     <audio id="track"></audio>
   </div>
