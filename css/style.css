@@ -30,7 +30,7 @@ body {
 
 /* Background images per page using body class */
 body.page-home {
-  background-image: url('../assets/Images/peace-whiteonblack.png');
+  background-image: url('../assets/images/peace-whiteonblack.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -41,7 +41,7 @@ body.page-home {
 }
 
 body.page-artists {
-  background-image: url('../assets/Images/peace-covclubandevie.png');
+  background-image: url('../assets/images/peace-covclubandevie.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -52,7 +52,7 @@ body.page-artists {
 }
 
 body.page-covclub {
-  background-image: url('../../assets/Images/peace-covclub.png');
+  background-image: url('../../assets/images/peace-covclub.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -63,7 +63,7 @@ body.page-covclub {
 }
 
 body.page-evie {
-  background-image: url('../../assets/Images/peace-evie.png');
+  background-image: url('../../assets/images/peace-evie.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -100,8 +100,9 @@ header, h1, h2, h3, h4, h5, h6 {
 }
 
 .record-sleeve {
-  cursor: pointer; /* Change cursor to pointer on hover */
-  transition: transform 0.2s; /* Animation effect */
+  position: relative; /* Allows positioning of child elements */
+  display: inline-block; /* Makes the record sleeve fit around the image */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering */
 }
 
 .record-sleeve img {
@@ -112,6 +113,35 @@ header, h1, h2, h3, h4, h5, h6 {
 
 .record-sleeve:hover {
   transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.play-pause-icon {
+  position: absolute; /* Positions the icon over the image */
+  top: 50%; /* Centers the icon vertically */
+  left: 50%; /* Centers the icon horizontally */
+  transform: translate(-50%, -50%); /* Adjusts the position to truly center it */
+  width: 75px; /* Size of the icon */
+  height: 75px; /* Size of the icon */
+  fill: rgb(255, 255, 255); /* Color of the icon */
+  stroke: rgb(0, 0, 0); /* Outline color */
+  stroke-width: 0.5; /* Outline thickness */
+  display: none; /* Hides the icon initially */
+}
+
+.playing .play-icon {
+  display: none; /* Hides the play icon when playing */
+}
+
+.playing .pause-icon {
+  display: block; /* Shows the pause icon when playing */
+}
+
+.paused .play-icon {
+  display: block; /* Shows the play icon when paused */
+}
+
+.paused .pause-icon {
+  display: none; /* Hides the pause icon when paused */
 }
 
 /* Preserve your original link styling */

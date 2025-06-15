@@ -1,21 +1,34 @@
 // console.log("Hello from your script.js file!");
 
-let currentTrack = null; // Variable to keep track of the current track
+let currentTrack = null; // Variable to keep track of the currently playing track
 
-function toggleTrack(track) {
-    const audio = document.getElementById('track');
+function toggleTrack(trackSrc, element) {
+    const audio = document.getElementById('track'); // Get the audio element
 
-    // If the clicked track is the same as the current track, toggle play/pause
-    if (currentTrack === track) {
+    if (currentTrack === trackSrc) {
+        // If the same track is clicked, toggle play/pause
         if (audio.paused) {
-            audio.play();
+            audio.play(); // Play the audio
+            element.classList.remove('paused'); // Update the class to show it's playing
+            element.classList.add('playing');
         } else {
-            audio.pause();
+            audio.pause(); // Pause the audio
+            element.classList.remove('playing'); // Update the class to show it's paused
+            element.classList.add('paused');
         }
     } else {
-        // If a different track is clicked, change the source and play it
-        audio.src = track;
-        audio.play();
-        currentTrack = track; // Update the current track
+        // If a different track is clicked
+        audio.src = trackSrc; // Set the new track source
+        audio.play(); // Play the new track
+        currentTrack = trackSrc; // Update the current track
+
+        // Update the classes for all record sleeves
+        const sleeves = document.querySelectorAll('.record-sleeve');
+        sleeves.forEach(sleeve => {
+            sleeve.classList.remove('playing');
+            sleeve.classList.add('paused');
+        });
+        element.classList.remove('paused');
+        element.classList.add('playing');
     }
 }
