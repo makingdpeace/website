@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="/favicon.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>jjiimm | PeaceMakingMusic</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="page-jjiimm">
+   <div>
+    <header>
+      <h1>jjiimm</h1>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../members.html">Members</a>
+      </nav>
+    </header>
+    <main>
+      <p>Guitars and laptops</p>
+      <!-- <p><a href="https://thecovclub.bandcamp.com">Bandcamp</a></p> -->
+    <!-- </main> -->
+    <div class="record-sleeves">
+      <div class="record-sleeve paused" onclick="toggleTrack('../assets/audio/jjiimm2.mp3', this)">
+        <img src="../assets/images/jjiimm2.jpeg" alt="jjiimm2">
+        <svg class="play-pause-icon play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z"/> <!-- Play icon -->
+         </svg>
+        <svg class="play-pause-icon pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M6 19h4V5H6zm8-14v14h4V5z"/> <!-- Pause icon -->
+        </svg>
+      </div>
+    </div>
+    </main>
+    <!-- Audio Element (hidden) -->
+    <audio id="track"></audio>
+  </div>
+  <!-- Include the JavaScript file -->
+  <script src="../js/script.js"></script>
+</body>
+</html>
