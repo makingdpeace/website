@@ -51,17 +51,6 @@ body.page-members {
   position: relative; /* For positioning the overlay correctly */
 }
 
-body.page-jjiimm {
-  background-image: url('../../assets/images/peace-jjiimm.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Optional: keeps the background fixed during scroll */
-  margin: 0;
-  height: 100vh; /*Makes sure the body fills the viewport */
-  position: relative; /* For positioning the overlay correctly */
-}
-
 body.page-covclub {
   background-image: url('../../assets/images/peace-covclub.png');
   background-size: cover;
@@ -75,6 +64,17 @@ body.page-covclub {
 
 body.page-evie {
   background-image: url('../../assets/images/peace-evie.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: keeps the background fixed during scroll */
+  margin: 0;
+  height: 100vh; /*Makes sure the body fills the viewport */
+  position: relative; /* For positioning the overlay correctly */
+}
+
+body.page-jjiimm {
+  background-image: url('../../assets/images/peace-jjiimm.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
